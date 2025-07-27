@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+canvas {
+  background: transparent !important;
+}
+
+body {
+  /* Use a lighter weight (300 or 400) for subtle body text */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; 
+}
