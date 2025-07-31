@@ -4,6 +4,7 @@ Todos:
 2. Content improve
 3. Attach Resume (maybe)
 4. Pop animation for astroids
+5. Rocket blast(maybe)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
