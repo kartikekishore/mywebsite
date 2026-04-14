@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame, ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useTheme } from 'next-themes';
@@ -423,12 +423,38 @@ function AstronautModel({ onClick, theme }: { onClick: (e: ThreeEvent<MouseEvent
 
 export default function FloatingAstronaut() {
   const { resolvedTheme, setTheme } = useTheme();
+  const [showHint, setShowHint] = useState(true);
+
   const handleClick = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowHint(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
   
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative group">
+      {/* Subtle tooltip that appears on hover */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-2 pointer-events-none z-10">
+        <div
+          className={`transition-opacity duration-700 ease-in-out ${
+            showHint ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+          }`}
+        >
+          <p
+            className={`text-xs px-3 py-1.5 rounded-full whitespace-nowrap backdrop-blur-sm border shadow-sm
+              ${resolvedTheme === 'light'
+                ? 'bg-black/5 text-black/30 border-black/10'
+                : 'bg-white/5 text-white/30 border-white/10'
+              }`}
+          >
+            Click Me!
+          </p>
+        </div>
+      </div>
+      
       <Canvas 
         camera={{ position: [0, 0, 3], fov: 50 }} 
         style={{ 

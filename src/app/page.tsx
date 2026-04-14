@@ -1,6 +1,7 @@
 import Scene from '@/components/Scene';
 import Header from '@/components/sections/Header';
 import About from '@/components/sections/About';
+import Experience from '@/components/sections/Experience';
 import Projects from '@/components/sections/Projects';
 import Skills from '@/components/sections/Skills';
 import Programming from '@/components/sections/Programming';
@@ -33,12 +34,14 @@ export default function Home() {
         <Header />
         
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-    
+          {/* Left Column: About, Experience, Projects */}
           <div className="md:col-span-2 space-y-8">
             <About />
+            <Experience />
             <Projects />
           </div>
 
+          {/* Right Column: Education, Skills, Programming, Extracurriculars */}
           <div className="space-y-8">
             <Education />
             <Skills />

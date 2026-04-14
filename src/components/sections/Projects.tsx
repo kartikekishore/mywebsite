@@ -25,12 +25,6 @@ export default function Projects() {
       technologies: "HTML, CSS, JavaScript",
       liveLink: "https://kartikekishore.github.io/Weather_app/",
       githubLink: "https://github.com/kartikekishore/Weather_app"
-    },
-    {
-      title: "YouTube Clone",
-      description: "A Web Development project that uses Youtube API for searching videos and playing them.",
-      technologies: "React, HTML, CSS, NodeJs",
-      githubLink: "https://github.com/kartikekishore/YTUBE_REACT"
     }
   ];
 

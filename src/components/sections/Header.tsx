@@ -1,6 +1,7 @@
 'use client';
 
 import { FaTwitter, FaLinkedinIn, FaGithubAlt, FaBlogger, FaHackerrank, FaMapMarkerAlt, FaEnvelope, FaLink } from 'react-icons/fa';
+import { SiMedium } from 'react-icons/si';
 
 export default function Header() {
   return (
@@ -19,6 +20,9 @@ export default function Header() {
         <a href="https://github.com/kartikekishore" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">
           <FaGithubAlt size={24} />
         </a>
+        <a href="https://medium.com/@kartikekishore" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">
+  <SiMedium size={24} />
+</a>
         <a href="https://mainhukartike.blogspot.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition-colors">
           <FaBlogger size={24} />
         </a>
