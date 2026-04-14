@@ -50,21 +50,21 @@ export default function Experience() {
           <div key={index} className="border-l-2 border-blue-500 dark:border-blue-400 pl-4 pb-4">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
               <div>
-                <h3 className="text-base font-bold text-gray-900 dark:text-white">{exp.company}</h3>
-                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{exp.role}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{exp.company}</h3>
+                <p className="text-base font-semibold text-gray-700 dark:text-gray-300">{exp.role}</p>
               </div>
-              <div className="text-xs text-gray-600 dark:text-gray-400 sm:text-right mt-1 sm:mt-0">
+              <div className="text-sm text-gray-600 dark:text-gray-400 sm:text-right mt-1 sm:mt-0">
                 <p>{exp.period}</p>
                 <p className="italic">{exp.location}</p>
               </div>
             </div>
             <ul className="list-disc list-inside space-y-1 mb-2 text-gray-700 dark:text-gray-300">
               {exp.achievements.map((achievement, i) => (
-                <li key={i} className="text-xs leading-relaxed">{achievement}</li>
+                <li key={i} className="text-base leading-relaxed">{achievement}</li>
               ))}
             </ul>
             <div className="mt-2">
-              <p className="text-xs text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
                 <span className="font-semibold">Tech Stack:</span> {exp.techStack}
               </p>
             </div>

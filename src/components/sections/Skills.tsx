@@ -34,7 +34,7 @@ export default function Skills() {
       <div className="space-y-4">
         {skillCategories.map((category, index) => (
           <div key={index}>
-            <h3 className="font-bold mb-2 text-gray-800 dark:text-white text-sm">{category.category}</h3>
+            <h3 className="font-bold mb-2 text-gray-800 dark:text-white text-base">{category.category}</h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, skillIndex) => (
                 <span 

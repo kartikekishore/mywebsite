@@ -20,8 +20,8 @@ export default function Education() {
       <div className="space-y-4">
         {education.map((edu, index) => (
           <div key={index}>
-            <h3 className="font-bold text-gray-800 dark:text-white">{edu.institution}</h3>
-            <p className="text-gray-600 dark:text-gray-300">{edu.degree} {edu.period}</p>
+            <h3 className="font-bold text-base text-gray-800 dark:text-white">{edu.institution}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{edu.degree} {edu.period}</p>
           </div>
         ))}
       </div>
